@@ -1,0 +1,18 @@
+line    -->     exit
+line    -->     exp
+line    -->     line exp
+line    -->     line exit
+line    -->     exp exit
+
+exp    	-->     term
+exp    	-->     exp AddOp term
+exp     -->     exp MinOp term
+
+term   	-->     factor
+term    -->     factor MulOp term
+term    -->     factor DivOp term
+
+factor  -->     primary
+
+primary -->     number
+primary -->     startingParanthesis exp endingParanthesis
